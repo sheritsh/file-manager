@@ -1,7 +1,9 @@
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
+import { homedir } from 'os';
 import { createInterface } from 'readline';
-
+import { chdir } from 'process';
+import { handleCommand } from './cli.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,6 +17,8 @@ if (!username) {
 
 console.log(`Welcome to the File Manager, ${username}!`);
 
+chdir(homedir());
+console.log(`You are currently in ${process.cwd()}`);
 
 const rl = createInterface({
     input: process.stdin,
