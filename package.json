@@ -6,8 +6,11 @@
   "scripts": {
     "start": "node src/index.js"
   },
-  "keywords": ["file-manager", "cli"],
-  "author": "",
+  "keywords": [
+    "file-manager",
+    "cli"
+  ],
+  "author": "Oleg Polovinko",
   "license": "ISC",
-  "description": "A CLI file manager built with Node.js"
+  "description": "A CLI file manager built with Node.js as part of RS School course"
 }
